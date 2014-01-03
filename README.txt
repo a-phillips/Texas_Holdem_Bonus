@@ -1,6 +1,6 @@
 This program is a text-based version of a casino table game by the same name. It was fun when I played it and I thought it’d be a good way to practice programming. It is essentially a heads-up game of Texas Holdem against the dealer. The house edge comes in the payout - the house pays out 1-to-1 on all bets EXCEPT the ante, unless the player has a straight or higher in which case the house pays to the ante as well.
 
-The gameplay is as follows:
+The game is run using run_game(). The gameplay is as follows:
 
 1)  The player chooses an ante amount, $5 or higher. All future bets will be tied to the initial ante amount.
 
@@ -13,5 +13,7 @@ The gameplay is as follows:
 5)  The river is dealt, and the dealer is given his two cards. The hands are then compared, and the player is either paid or his bets are taken off the table.
 
 There is a lot I could add as I learn more, such as an actual GUI for the game, or saving progress so that players can keep track of their winnings over time.
+
+There is also a function for simulating the distribution of hands, run_sim(n), where n is the number of hands dealt. This basically just shuffles the deck, picks the cards belonging to the player, dealer, and community, then evaluates the hands and tracks the counts. I wrote it after the dealer got a bunch of great hands and I thought the shuffle might be somehow messed up (and definitely not the nature of randomness, of course), but I think it could be useful for developing a strategy.
 
 Enjoy, and feel free to rip my code to shreds, since I’m sure it’s not particularly “Pythonic” or proper or anything - I need to learn!
